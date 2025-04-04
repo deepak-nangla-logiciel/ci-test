@@ -1,0 +1,85 @@
+name: Mobile Tests Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+        - dev
+        - stage
+        - hotfix
+        - prod
+      debug_enabled:
+        description: 'Run the workflow with debug logging'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Setup Appium
+        run: |
+          npm install -g appium@next
+          appium driver install xcuitest
+          appium driver install uiautomator2
+          
+      - name: Start Appium Server
+        run: |
+          appium -p 4723 --base-path /wd/hub &
+          sleep 5
+        
+      - name: Run tests
+        run: pnpm run test:${{ inputs.environment }}
+        
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            runtime/screenshots/
+            runtime/reports/
+            runtime/logs/
+          
+      - name: Log debug information
+        if: inputs.debug_enabled
+        run: |
+          echo "Debug information enabled"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Node version: $(node -v)"
+          echo "pnpm version: $(pnpm -v)"
+          echo "Appium version: $(appium -v)" 

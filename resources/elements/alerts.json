@@ -1,0 +1,10 @@
+{
+    "replace": "~Replace",
+    "savePassword": "~Save Password",
+    "allow": "//XCUIElementTypeButton[@label='Allow']",
+    "alertDontAllowButton": "//XCUIElementTypeButton[@label='Don’t Allow']",
+    "alertSendButton": "(//XCUIElementTypeButton[@name='Send'])[2]",
+    "syncPrice": "~Syncing Price Guide",
+    "continue": "[label='Continue']",
+    "clone": "~Clone Estimate into Existing Customer"
+}

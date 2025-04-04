@@ -1,0 +1,11 @@
+{
+    "appName": "[name='SalesPro']",
+    "developmentModeToggleDisabled": "(//XCUIElementTypeSwitch[@value='0'])[2]",
+    "apiServer": "~api_server",
+    "devApiServer": "~Development",
+    "stagingApiServer": "~Staging",
+    "hotfixApiServer": "~Hotfix",
+    "productionApiServer": "~Default",
+    "developmentModeToggleEnabled": "(//XCUIElementTypeSwitch[@value='1'])[4]"
+    
+}

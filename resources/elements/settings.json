@@ -1,0 +1,5 @@
+{
+    "completedUploads": "~settingScreen_completedUploads",
+    "resultRecord": "~settings_completedUploadsCell_Results",
+    "itemsCatalog": "~settingScreen_itemCatalog"
+}

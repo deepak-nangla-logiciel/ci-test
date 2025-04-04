@@ -1,0 +1,18 @@
+{
+    "appLibrary": "~AppLibrary",
+    "appLibrarySearch": "~dewey-search-field",
+    "appLibraryContinuePermssion": "[label='Continue']",
+    "appLibraryAllowOncePermssion": "[label='Allow Once']",
+    "appLibraryAllowPermssion": "[label='Allow']",
+    "eventPlusButton": "[label='Add']",
+    "eventTitleTextBox": "//XCUIElementTypeTextField[@name='Title']",
+    "eventSaveButton": "(//XCUIElementTypeButton[@name='Add'])[2]",
+    "calendarOption": "~Calendar",
+    "calendarDoneButton": "~Done",
+    "importCalendarSettingsOption": "~settingScreen_importCalendars",
+    "calendarButton": "~customerScreen_calendarButton",
+    "leapErroOkButton": "~OK",
+    "backButton": "[label='Back']",
+    "calendarOptionValue": "//XCUIElementTypeCell[@name='Calendar']",
+    "calendarCheckMark": "~checkmark"
+}

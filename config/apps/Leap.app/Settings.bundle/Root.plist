@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Development Mode</string>
+			<key>Key</key>
+			<string>development_mode_enabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>API Server</string>
+			<key>Key</key>
+			<string>api_server</string>
+			<key>DefaultValue</key>
+			<string>$(LEAP_API_URL)</string>
+			<key>Titles</key>
+			<array>
+				<string>Charlie</string>
+				<string>Default</string>
+				<string>Development</string>
+				<string>Hotfix</string>
+				<string>LaLa Land</string>
+				<string>Staging</string>
+				<string>Staging-2</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>https://api-charlie.dev.leaptodigital.com/leap</string>
+				<string>$(LEAP_API_URL)</string>
+				<string>https://apidev.leaptodigital.com/leap</string>
+				<string>https://apihotfix.leaptodigital.com/leap</string>
+				<string>http://0.0.0.0:1337/leap</string>
+				<string>https://apistage.leaptodigital.com/leap</string>
+				<string>https://apitroubleshoot.leaptodigital.com/leap</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

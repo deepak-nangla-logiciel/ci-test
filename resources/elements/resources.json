@@ -1,0 +1,5 @@
+{
+    "leftNavigationResourcesOption": "~leftNav_Resources",
+    "resources": "[type=XCUIElementTypeImage]",
+    "resourceViewerCloseButton": "~pdfViewer_closeButton" 
+}

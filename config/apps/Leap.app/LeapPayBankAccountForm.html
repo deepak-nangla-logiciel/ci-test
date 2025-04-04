@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width user-scalable=no zoom=1">
+<head>
+    <title>Input Form</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@justifi/webcomponents@4.16.0/dist/webcomponents/webcomponents.css"
+    />
+    <style>
+        :root {
+          --jfi-form-control-color: #111;
+          --jfi-form-control-padding: 12px 12px 12px 12px;
+          --jfi-layout-form-control-spacing-x: 16px;
+          --jfi-layout-form-control-spacing-y: 16px;
+          --jfi-layout-font-family: 'Roboto',sans-serif;
+          --jfi-form-control-border-width: 1px;
+          --jfi-form-control-border-style: solid;
+          --jfi-form-control-border-color: #E0E0E0;
+          --jfi-form-control-border-radius: 8px;
+          --jfi-form-control-border-color-focus: #418BCA;
+          --jfi-form-control-font-size: 14px;
+          --jfi-form-label-font-size: 14px;
+          --jfi-form-label-color: #444;
+          --jfi-form-label-margin: 0 0 5px 0;
+          --jfi-form-label-font-weight: 400;
+          --jfi-form-label-font-family: 'Roboto',sans-serif;
+          --jfi-error-message-color: rgb(220,68,55);
+          --jfi-error-message-margin: 5px 0 0 0;
+          --jfi-error-message-font-size: 12px;
+        }
+    </style>
+    <script type='module' src='https://cdn.jsdelivr.net/npm/@justifi/webcomponents@4.16.0/dist/webcomponents/webcomponents.esm.js'>
+    </script>
+</head>
+<body>
+    <justifi-bank-account-form
+      validation-mode="onChange"
+    />
+    <script>
+        
+        function setContent() {
+            var bankAccountForm = document.querySelector('justifi-bank-account-form');
+            
+            // Add new listener on card form
+            bankAccountForm.addEventListener('bankAccountFormReady', bankAccountFormReadyCallback);
+        }
+        
+        function validateAndTokenize(data, isOtherFieldsValid ) {
+            // Collect form data
+            var decodedData = window.atob(data);  // decode the data
+            var paramsData = JSON.parse(decodedData);
+            var bankAccountForm = document.querySelector('justifi-bank-account-form');
+            
+            window.webkit.messageHandlers.jsHandler.postMessage({ action: 'tokenize', data: "" });
+            bankAccountForm.validate().then(function(data) {
+                var shouldTokenize = data.isValid && isOtherFieldsValid;
+                
+                if (shouldTokenize) {
+                    var clientId = paramsData['client_id'];
+                    var accountId = paramsData['account_id'];
+                    var params = paramsData['params'];
+                    
+                    bankAccountForm.tokenize(clientId, params, accountId).then(function(data) {
+                        // Check for error message and display on the Swift side
+                        window.webkit.messageHandlers.jsHandler.postMessage({ action: 'validateAndTokenize', data: data });
+                    }).catch(function(error) {
+                        // Display error message and stop loading on the Swift side
+                        window.webkit.messageHandlers.jsHandler.postMessage({ action: 'validateAndTokenize', error: error });
+                        
+                    });
+                } else {
+                    window.webkit.messageHandlers.jsHandler.postMessage({ action: 'validateAndTokenize', error: "Invalid bank account details" });
+                }
+            });
+        }
+        
+        var bankAccountFormReadyCallback = function () {
+            window.webkit.messageHandlers.jsHandler.postMessage({ action: 'paymentMethodLoaded', paymentMethod: 'bank' });
+        };
+    </script>
+</body>
+
+</html>

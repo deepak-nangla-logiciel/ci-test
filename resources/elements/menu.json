@@ -1,0 +1,15 @@
+{   
+    "customers": "~leftNav_Customers",
+    "estimates": "~leftNav_Estimates",
+    "proposals": "~leftNav_Proposals",
+    "contracts": "~leftNav_Contracts",
+    "priceGuide": "~leftNav_Price Guide",
+    "financeCalculator": "leftNav_Finance Calculator",
+    "resources": "~leftNav_Resources",
+    "availableContacts": "~leftNav_Available Contacts",
+    "tasks": "~leftNav_Tasks",
+    "settings": "~leftNav_Settings",
+    "userInfo": "~leftNav_userInfoButton",
+    "errorUTF8Ok": "[label='OK']",
+    "continueButton": "[label='Continue']"
+}

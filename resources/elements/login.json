@@ -1,0 +1,19 @@
+{
+  "inputUsername": "~login_usernameField",
+  "inputPassword": "~login_passwordField",
+  "btnSubmit": "~login_loginButton",
+  "forgotPassword": "//XCUIElementTypeStaticText[@name='Forgot Password?']",
+  "useSSO": "/XCUIElementTypeStaticText[@name='Use Single Sign On']",
+  "loginError": "//XCUIElementTypeStaticText[@name='Error']",
+  "loadingSpinner": "In progress",
+  "logoutButton": "~",
+  "logoutConfirm": "~leftNav_logoutAlertLogoutButton",
+  "logoutCancel": "//XCUIElementTypeButton[@name='Cancel']",
+  "syncPriceLoader":"~Syncing Price Guide",
+  "logoutIcon": "~leftNav_logoutButton",
+  "passwordVisibilityToggle": "~login_togglePasswordEyeButton",
+  "elementTypes": {
+    "secureTextField": "XCUIElementTypeSecureTextField",
+    "textField": "XCUIElementTypeTextField"
+  }
+}

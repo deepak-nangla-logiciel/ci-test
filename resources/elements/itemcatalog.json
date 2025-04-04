@@ -1,0 +1,14 @@
+{
+    "addItem": "[label='ADD ITEM']",
+    "createTemplate": "[label='CREATE TEMPLATE']",
+    "categoryName": "//XCUIElementTypeTextField[@value='Category Name']",
+    "itemName": "//XCUIElementTypeTextField[@value='Item Name']",
+    "itemPrice": "//XCUIElementTypeTextField[@value='Price']",
+    "saveButton": "//XCUIElementTypeButton[@name='SAVE']",
+    "templateName": "//XCUIElementTypeTextField[@value='Enter Template Name']",
+    "templateTab": "[label='Templates']",
+    "addItemToggle": "XCUIElementTypeSwitch",
+    "backButtonItemCatalog": "[label='Items Catalog']",
+    "backButtonOnItemCatalog": "[type='XCUIElementTypeButton']",
+    "itemNameInput": "~Item Name"
+}

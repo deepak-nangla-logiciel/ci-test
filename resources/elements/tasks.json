@@ -1,0 +1,14 @@
+{
+    "leftNavigationTasksOption": "~leftNav_Tasks",
+    "tasksCreationButton": "~tasks_createNewTaskButton",
+    "tasksNmaeTextBox": "~tasks_modelTaskNameField",
+    "tasksNotesTextArea": "~tasks_modelNotesField",
+    "tasksSaveButton": "~tasks_modelSaveButton",
+    "tasksMoreInfoButton": "[name='More Info']",
+    "tasksCancelButton": "~tasks_modelCancelButton",
+    "latestTasksName": "~tasks_cell_",
+    "latestTasksNameRadioButton": "~tasks_cellStatusButton_",
+    "customerSectionThreeDots": "~leftNav_threeDotButton",
+    "customerSectionCreateTaskButton": "~leftNav_threeDotsSheetCreateTaskButton" 
+
+}
