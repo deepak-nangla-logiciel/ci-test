@@ -40,16 +40,8 @@ jobs:
     - name: Install Appium
       run: |
         npm install -g appium
-        if ! appium driver list --installed | grep -q xcuitest; then
-          appium driver install xcuitest
-        else
-          appium driver update xcuitest
-        fi
-        if ! appium driver list --installed | grep -q uiautomator2; then
-          appium driver install uiautomator2
-        else
-          appium driver update uiautomator2
-        fi
+        appium driver update xcuitest || appium driver install xcuitest
+        appium driver update uiautomator2 || appium driver install uiautomator2
     
     - name: Start Appium Server
       run: appium &
