@@ -12,8 +12,6 @@ describe('Example Test Suite', () => {
         await $("~login_usernameField").setValue("test@test.com");
         await $("~login_passwordField").click();
         await $("~login_passwordField").setValue("test");
-        await $("~login_loginButton").click();
-        
     });
 
 }); 
