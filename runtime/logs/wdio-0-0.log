@@ -1,0 +1,78 @@
+2025-04-07T13:41:18.699Z INFO @wdio/local-runner: Run worker command: run
+2025-04-07T13:41:18.789Z INFO webdriver: Initiate new session using the WebDriver protocol
+2025-04-07T13:41:18.789Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2025-04-07T13:41:18.794Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2025-04-07T13:41:18.794Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'iOS',
+      'appium:automationName': 'XCUITest',
+      'appium:deviceName': 'iPad Pro 13-inch (M4)',
+      'appium:platformVersion': '17.4',
+      'appium:app': './app/Leap.app',
+      'appium:noReset': false
+    },
+    firstMatch: [ {} ]
+  }
+}
+2025-04-07T13:41:24.831Z INFO webdriver: COMMAND findElement("accessibility id", "login_usernameField")
+2025-04-07T13:41:24.831Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element
+2025-04-07T13:41:24.831Z INFO webdriver: DATA { using: 'accessibility id', value: 'login_usernameField' }
+2025-04-07T13:41:24.973Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '26000000-0000-0000-F371-000000000000',
+  ELEMENT: '26000000-0000-0000-F371-000000000000'
+}
+2025-04-07T13:41:24.977Z INFO webdriver: COMMAND elementClick("26000000-0000-0000-F371-000000000000")
+2025-04-07T13:41:24.977Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/26000000-0000-0000-F371-000000000000/click
+2025-04-07T13:41:25.858Z INFO webdriver: RESULT null
+2025-04-07T13:41:25.859Z INFO webdriver: COMMAND findElement("accessibility id", "login_usernameField")
+2025-04-07T13:41:25.859Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element
+2025-04-07T13:41:25.859Z INFO webdriver: DATA { using: 'accessibility id', value: 'login_usernameField' }
+2025-04-07T13:41:26.024Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '26000000-0000-0000-F371-000000000000',
+  ELEMENT: '26000000-0000-0000-F371-000000000000'
+}
+2025-04-07T13:41:26.026Z INFO webdriver: COMMAND elementClear("26000000-0000-0000-F371-000000000000")
+2025-04-07T13:41:26.026Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/26000000-0000-0000-F371-000000000000/clear
+2025-04-07T13:41:26.399Z INFO webdriver: RESULT null
+2025-04-07T13:41:26.399Z INFO webdriver: COMMAND elementSendKeys("26000000-0000-0000-F371-000000000000", "test@test.com")
+2025-04-07T13:41:26.399Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/26000000-0000-0000-F371-000000000000/value
+2025-04-07T13:41:26.399Z INFO webdriver: DATA { text: 'test@test.com' }
+2025-04-07T13:41:27.032Z INFO webdriver: RESULT null
+2025-04-07T13:41:27.033Z INFO webdriver: COMMAND findElement("accessibility id", "login_passwordField")
+2025-04-07T13:41:27.033Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element
+2025-04-07T13:41:27.033Z INFO webdriver: DATA { using: 'accessibility id', value: 'login_passwordField' }
+2025-04-07T13:41:27.199Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '27000000-0000-0000-F371-000000000000',
+  ELEMENT: '27000000-0000-0000-F371-000000000000'
+}
+2025-04-07T13:41:27.201Z INFO webdriver: COMMAND elementClick("27000000-0000-0000-F371-000000000000")
+2025-04-07T13:41:27.201Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/27000000-0000-0000-F371-000000000000/click
+2025-04-07T13:41:27.787Z INFO webdriver: RESULT null
+2025-04-07T13:41:27.788Z INFO webdriver: COMMAND findElement("accessibility id", "login_passwordField")
+2025-04-07T13:41:27.788Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element
+2025-04-07T13:41:27.788Z INFO webdriver: DATA { using: 'accessibility id', value: 'login_passwordField' }
+2025-04-07T13:41:27.948Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '27000000-0000-0000-F371-000000000000',
+  ELEMENT: '27000000-0000-0000-F371-000000000000'
+}
+2025-04-07T13:41:27.950Z INFO webdriver: COMMAND elementClear("27000000-0000-0000-F371-000000000000")
+2025-04-07T13:41:27.950Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/27000000-0000-0000-F371-000000000000/clear
+2025-04-07T13:41:28.031Z INFO webdriver: RESULT null
+2025-04-07T13:41:28.032Z INFO webdriver: COMMAND elementSendKeys("27000000-0000-0000-F371-000000000000", "<Screenshot[base64]>")
+2025-04-07T13:41:28.032Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/27000000-0000-0000-F371-000000000000/value
+2025-04-07T13:41:28.032Z INFO webdriver: DATA { text: 'test' }
+2025-04-07T13:41:28.564Z INFO webdriver: RESULT null
+2025-04-07T13:41:28.565Z INFO webdriver: COMMAND findElement("accessibility id", "login_loginButton")
+2025-04-07T13:41:28.565Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element
+2025-04-07T13:41:28.565Z INFO webdriver: DATA { using: 'accessibility id', value: 'login_loginButton' }
+2025-04-07T13:41:28.737Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '1C000000-0000-0000-F371-000000000000',
+  ELEMENT: '1C000000-0000-0000-F371-000000000000'
+}
+2025-04-07T13:41:28.739Z INFO webdriver: COMMAND elementClick("1C000000-0000-0000-F371-000000000000")
+2025-04-07T13:41:28.739Z INFO webdriver: [POST] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64/element/1C000000-0000-0000-F371-000000000000/click
+2025-04-07T13:41:29.509Z INFO webdriver: RESULT null
+2025-04-07T13:41:29.512Z INFO webdriver: COMMAND deleteSession()
+2025-04-07T13:41:29.512Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/f251b9fd-810e-41d7-ac10-0c2eb5bafd64
+2025-04-07T13:41:30.594Z INFO webdriver: RESULT null

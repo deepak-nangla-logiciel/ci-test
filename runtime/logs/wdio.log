@@ -1,0 +1,12 @@
+2025-04-07T13:41:17.027Z INFO @wdio/cli:launcher: Run onPrepare hook
+2025-04-07T13:41:17.029Z INFO @wdio/appium-service: Will spawn Appium process: appium --base-path / --relaxed-security --address localhost --port 4723 --session-override
+2025-04-07T13:41:18.327Z INFO @wdio/appium-service: Appium started with ID: 28861
+2025-04-07T13:41:18.329Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2025-04-07T13:41:18.329Z INFO @wdio/local-runner: Start worker 0-0 with arg: run wdio.conf.js
+2025-04-07T13:41:30.713Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2025-04-07T13:41:30.715Z INFO @wdio/local-runner: Shutting down spawned worker
+2025-04-07T13:41:30.967Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2025-04-07T13:41:30.968Z INFO @wdio/local-runner: shutting down
+2025-04-07T13:41:30.968Z INFO @wdio/cli:launcher: Run onComplete hook
+2025-04-07T13:41:30.969Z INFO @wdio/appium-service: Killing entire Appium tree
+2025-04-07T13:41:31.005Z INFO @wdio/appium-service: Process and its children successfully terminated

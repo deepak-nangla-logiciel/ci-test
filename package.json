@@ -1,0 +1,45 @@
+{
+  "name": "ci-test",
+  "version": "1.0.0",
+  "description": "iOS App Testing with WebdriverIO and Appium",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio run wdio.conf.js",
+    "test:debug": "DEBUG=true wdio run wdio.conf.js",
+    "appium": "appium",
+    "report": "allure generate ./runtime/reports/allure-results --clean && allure open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepak-nangla-logiciel/ci-test.git"
+  },
+  "keywords": [
+    "wdio",
+    "appium",
+    "ios",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deepak-nangla-logiciel/ci-test/issues"
+  },
+  "homepage": "https://github.com/deepak-nangla-logiciel/ci-test#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/register": "^7.25.9",
+    "@wdio/allure-reporter": "^9.12.3",
+    "@wdio/appium-service": "^9.12.4",
+    "@wdio/cli": "^9.12.4",
+    "@wdio/local-runner": "^9.12.4",
+    "@wdio/mocha-framework": "^9.12.3",
+    "@wdio/spec-reporter": "^9.12.3",
+    "allure-commandline": "^2.27.0",
+    "appium": "^2.17.1",
+    "appium-xcuitest-driver": "^9.1.4",
+    "webdriverio": "^9.12.4"
+  }
+}
